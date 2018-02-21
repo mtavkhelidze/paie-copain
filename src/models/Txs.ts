@@ -10,7 +10,7 @@ export class Txs extends Model<Txs> implements Transaction {
     public id: number;
 
     @Column
-    public created: number;
+    public created: string;
 
     @Column
     public nostro: string;
