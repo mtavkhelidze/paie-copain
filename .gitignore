@@ -116,3 +116,5 @@ fabric.properties
 /.idea/
 /node_modules/
 /dist/
+*.ign.*
+/*.sqlite3

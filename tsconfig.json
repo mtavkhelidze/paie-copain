@@ -2,29 +2,38 @@
   "compileOnSave": false,
   "compilerOptions": {
     "outDir": "./dist",
-    "sourceMap": false,
+    "sourceMap": true,
     "declaration": false,
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "target": "es5",
-    "strictNullChecks": true,
+    "target": "es6",
     "allowJs": false,
-    "alwaysStrict": true,
-    "noImplicitAny": true,
-    "pretty": true,
+    "pretty": false,
+    "strict": true,
     "noImplicitReturns": true,
     "noUnusedLocals": true,
     "noFallthroughCasesInSwitch": true,
+    "strictPropertyInitialization": false,
     "types": [
       "node"
     ],
     "lib": [
-      "es2017",
-      "dom"
+      "es6",
+      "dom",
+      "esnext"
     ],
     "typeRoots": [
-      "node_modules/@types"
+      "node_modules/@types",
+      "./types.d.ts"
     ]
-  }
+  },
+  "include": [
+    "package.json",
+    "config.ts",
+    "src/"
+  ],
+  "exclude": [
+    "old/"
+  ]
 }

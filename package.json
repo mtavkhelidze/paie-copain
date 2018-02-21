@@ -2,15 +2,44 @@
   "name": "paie-copain",
   "version": "1.0.0",
   "description": "PayPal alike GraphQL API server.",
-  "main": "dist/index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "main": "dist/src/server.js",
+  "engines": {
+    "node": "9.5.0"
   },
-  "keywords": ["GraphQL"],
+  "scripts": {
+    "start": "ts-node src/server.ts",
+    "clean": "rimraf dist",
+    "lint": "tslint --project .",
+    "compile:watch": "tsc -w",
+    "watch": "DEBUG=pc:* nodemon -x 'ts-node src/server.ts' -e ts -w . -w src"
+  },
+  "keywords": [
+    "GraphQL"
+  ],
   "author": "Misha Tavkhelidze <misha.tavkhelidze@gmail.com>",
   "license": "UNLICENSED",
-  "devDependencies": {
+  "dependencies": {
+    "@creditkarma/graphql-loader": "^0.7.1",
+    "babel-runtime": "^6.26.0",
+    "body-parser": "^1.18.2",
+    "debug": "^3.1.0",
+    "express": "^4.16.2",
+    "express-graphql": "^0.6.11",
+    "graphql": "^0.13.1",
+    "graphql-loader": "^1.2.1",
+    "graphql-tools": "^2.21.0",
+    "reflect-metadata": "^0.1.12",
+    "rimraf": "^2.6.2",
+    "sequelize": "^4.33.4",
+    "sequelize-typescript": "^0.6.2",
+    "sqlite3": "^3.1.13",
+    "@types/debug": "0.0.30",
+    "@types/express": "^4.11.1",
+    "@types/express-graphql": "0.0.36",
+    "@types/graphql": "^0.12.3",
     "@types/node": "^9.4.5",
+    "@types/sqlite3": "^3.1.1",
+    "ts-node": "^4.1.0",
     "tslint": "^5.9.1",
     "typescript": "^2.7.1"
   }
