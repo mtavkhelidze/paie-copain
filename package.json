@@ -14,10 +14,12 @@
     "watch": "DEBUG=pc:* nodemon -x 'ts-node src/server.ts' -e ts -w . -w src"
   },
   "keywords": [
+    "typescript",
+    "express",
     "GraphQL"
   ],
   "author": "Misha Tavkhelidze <misha.tavkhelidze@gmail.com>",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "dependencies": {
     "@creditkarma/graphql-loader": "^0.7.1",
     "babel-runtime": "^6.26.0",
