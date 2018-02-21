@@ -16,7 +16,7 @@ export type CustomerInput = Partial<Customer>;
 
 export interface Transaction {
     id: number;
-    created: number;
+    created: string;
     nostro: string;
     vostro: string;
     amount: number;
